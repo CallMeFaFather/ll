@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <audio src="music/MUSIC.mp3" autoplay loop></audio>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>՞˶･֊･˶՞</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,8 +120,46 @@
   <div class="cs">
     <!-- <img src="http://wx1.sinaimg.cn/large/006gFOhdly1fr0hdrzlolj30b40b4dg7.jpg" id="logo"> -->
   </div>
-  <canvas class="canvas" width="1820" height="905"></canvas>
-  <canvas class="canvas2" width="1820" height="905"></canvas>
+  <canvas class="canvas" width="1080" height="600"></canvas>
+  <canvas class="canvas2" width="1080" height="600"></canvas>
+  <!-- <canvas></canvas>
+  <script>
+    // JavaScript代码从这里开始
+    var canvas = document.querySelector('canvas');
+    var context = canvas.getContext('2d');
+    var fontSize;
+    var subtitles;
+    var timeout;
+
+    window.addEventListener('resize', function () {
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+
+      // 字体大小根据屏幕尺寸调整
+      fontSize = Math.round(height / 10); // 假设字体大小占屏幕高度的10%
+
+      // 重新启动动画
+      if (subtitles) {
+        clearTimeout(timeout);
+        subtitles.write();
+      }
+    });
+
+    // 初始化时设置canvas大小
+    window.dispatchEvent(new Event('resize')); // 触发resize事件以设置初始大小
+
+    // 假设这里有一些初始化subtitles和设置timeout的代码
+    // 例如:
+    // subtitles = {
+    //     write: function() {
+    //         // 动画写入逻辑
+    //         timeout = setTimeout(this.write, 1000); // 假设每秒更新一次
+    //     }
+    // };
+    // subtitles.write(); // 开始动画
+  </script> -->
   <p class="text" style="color: #ed3073;">
     <!-- 这里添加文字 -->
     <br />
@@ -212,7 +251,7 @@
         var index = 0, // 记录当前播放的字幕
           text,
           // words = ['love'],
-          words = ['刘凌', '2025', '蛇年大吉', '新的一年', '平安喜乐', '万事顺意', '恭喜发财', '新春快乐'],
+          words = ['刘凌', '2025', '新的一年', '邪祟退散', '平安喜乐', '万事顺意', '新春快乐', '蛇年大吉'],
           fontSize = 500,
           canvas = document.querySelector('canvas'),
           context = canvas.getContext('2d'),
@@ -497,23 +536,21 @@
   <!-- 添加一个容器来放置页面的其他内容 -->
   <div class="content-container">
     <!-- 这里可以添加你的其他内容 -->
-    <h1>欢迎来到我的网站</h1>
-    <p>这里是一些其他信息或功能。</p>
+    <h1>属于刘凌的网站</h1>
+    <p></p>
   </div>
 
   <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="js/jquery.fireworks.js"></script>
   <script type="text/javascript">
     $('.demo').fireworks({
-      sound: false, // 关闭声音效果
+      sound: true, // 打开声音效果
       opacity: 0.9, // 烟花透明度
       width: '100%',
       height: '100%'
     });
   </script>
-  <div style="text-align:center;">
-    <audio controls autoplay loop src="music/MUSIC.mp3"></audio>
-  </div>
+
 </body>
 
 </html>
